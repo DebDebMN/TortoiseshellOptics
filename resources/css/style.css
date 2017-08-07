@@ -1,0 +1,86 @@
+html,
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  margin: 0;
+  background-color: white;
+  position: relative;
+  top: 0
+}
+
+.container960 {     /* This sets up a "box" for everything that needs to*/
+  max-width: 960px; /* fit into a 960px frame.  Note that max-width is used */
+  margin: 0 auto;   /* to allow smooth resizing. */
+}
+
+.header {
+  height: 30rem;
+  background-image: url("../images/glasses-bg.png");
+  background-size: cover;
+}
+
+.logo-nav {
+  position: relative;
+  top: 1rem;
+  margin: 1rem 0 0 0;
+  height: 4rem;
+  background-color: cadetblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.logo {
+height: 4rem;
+
+display: flex;
+align-items: center;
+}
+
+.logo img {
+  height: 1.5rem;
+  margin-left: 2rem;
+  margin-right: 1rem;
+}
+
+.logo p{
+  color: white;
+}
+
+nav {
+  background-color: cadetblue;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+li {
+  text-align: right;
+  display: inline-block;
+  padding: 1.0rem 2.0rem;
+}
+
+
+
+
+@media only screen and (min-width: 960px) {
+  .nav960 {
+    display: none;
+    }
+  }
+
+
+@media only screen and (max-width: 960px) {
+  .nav-large {
+    display: none;
+  }
+
+  .logo-nav {
+    top: 0rem;
+  }
+}
