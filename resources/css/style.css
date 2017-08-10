@@ -1,11 +1,20 @@
-html,
+html {
+font-size: 18px;
+line height: 1.4rem;
+}
+
 body {
   font-family: Helvetica, sans-serif;
-  font-size: 18px;
   margin: 0;
   background-color: white;
-  position: relative;
-  top: 0
+
+  h1 {
+    font-size: 2rem;
+  }
+
+
+  /* position: relative;
+  /* top: 0; */
 }
 
 .container960 {     /* This sets up a "box" for everything that needs to*/
@@ -13,23 +22,24 @@ body {
   margin: 0 auto;   /* to allow smooth resizing. */
 }
 
-.header {
+header {
   height: 30rem;
   background-image: url("../images/glasses-bg.png");
   background-size: cover;
-}
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 1rem;}
 
 .logo-nav {
-  position: relative;
-  top: 1rem;
-  margin: 1rem 0 0 0;
+  /* position: relative;
+  top: 1rem; */
   height: 4rem;
   background-color: cadetblue;
-  display: flex;
+
+  display:flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .logo {
@@ -38,6 +48,8 @@ height: 4rem;
 display: flex;
 align-items: center;
 }
+
+
 
 .logo img {
   height: 1.5rem;
@@ -65,22 +77,99 @@ li {
   padding: 1.0rem 2.0rem;
 }
 
+/**********
+  TAG-LINE
+***********
+*/
+
+header .tag-line-container {
+  display: flex;
+  justify-content: flex-end;
+}
 
 
+.tag-line {
+  margin-top: 10rem;
+  margin-right: -2rem;
 
-@media only screen and (min-width: 960px) {
+  background-color: white;
+  padding: 1.5rem 5rem;
+  line-height: 2.4;
+
+  display: flex;
+  display: inline-block;
+}
+
+.tag-line h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0;
+}
+
+header .tag-line-small {
+  height: 3rem;
+  margin-top: 9rem;
+  max-width: 960px;
+  background-color: white;
+
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tag-line-smaller h1{
+  font-size: 1rem;
+  text-align: center;
+}
+
+@media only screen and (min-width: 471px) {
   .nav960 {
     display: none;
-    }
   }
+header .tag-line-small {
+    display: none;
+  }
+} /* for media >471px */
 
 
 @media only screen and (max-width: 960px) {
-  .nav-large {
-    display: none;
-  }
 
   .logo-nav {
     top: 0rem;
   }
-}
+  .company-name {
+    display: none;
+  }
+  header {
+  height: 22rem;
+  padding-top: 0rem;
+  }
+  .tag-line {
+    margin-top: 5rem;
+    margin-right: 2rem;
+    padding: 0.75rem 4rem;
+  }
+  .tag-line h1 {
+    font-size: 1.33rem;
+  }
+}  /* for media <=960px */
+
+@media only screen and (max-width: 470px) {
+
+  html {
+    font-size: 16px;
+   }
+  header {
+    height: 17rem;
+    background-position: 25%;
+    padding-top: 0rem;
+    border:thin solid red;
+    }
+  header .tag-line-container {
+    display: none;
+  }
+  .nav-large {
+    display: none;
+  }
+
+}  /* for media <=470px */
