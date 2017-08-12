@@ -32,11 +32,10 @@ header {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-top: 1rem;}
+  padding-top: 1rem;
+}
 
 .logo-nav {
-  /* position: relative;
-  top: 1rem; */
   height: 4rem;
   background-color: cadetblue;
 
@@ -47,10 +46,10 @@ header {
 }
 
 .logo {
-height: 4rem;
+  height: 4rem;
 
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 
@@ -134,7 +133,7 @@ header .tag-line-small {
   height: 11rem;
   max-width: 960px; /* fit into a 960px frame.  Note that max-width is used */
   margin: 0 auto;
-    padding-top: 3rem;
+  padding-top: 3rem;
 /*  border: thin solid red; /**********************/
 }
 
@@ -217,11 +216,48 @@ header .tag-line-small {
 }
 
 
+/*************
+   FOOTER
+**************/
+
+footer {
+  margin: 0 auto;
+  width: 57.33rem;
+  height: 9.5rem;
+  background-color: azure;
+  margin-top: 4rem;
+  /*  border: thin solid red;   /****************************/
+  display: flex;
+  align-items: center;
+}
+
+
+.logo-footer {
+  display: flex;  /* was inline-flex */
+  align-items: center;
+  /*  border: thin solid green;   /***************************/
+}
+
+ .logo-footer img{
+  height: 1.5rem;
+  margin-left: 4rem;
+  /* border: thin solid blue;   /**************************/
+}
+
+.copyright h3{
+  font-weight: normal;
+}
+
+
 @media only screen and (min-width: 471px) {
   .nav960 {
     display: none;
   }
 header .tag-line-small {
+    display: none;
+  }
+
+  .logo-footer-small {
     display: none;
   }
 } /* for media >471px */
@@ -349,5 +385,24 @@ header .tag-line-small {
      margin: 1rem 0.5rem 0 0.5rem;
      font-size: 0.77rem;
  }
+
+ .logo-footer {
+   justify-content: center;
+
+ }
+
+footer {
+  justify-content: center;
+  width: 100%;
+}
+
+.logo-footer img {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.copyright h3 {
+  display: none;
+}
 
 }  /* for media <=470px */
